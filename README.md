@@ -1,6 +1,6 @@
 <div align="center">
 
-# Sam Wilkie
+# Samuel Wilkie
 
 **Full-Stack Developer & SaaS Builder**
 Founder of [Wilkie Devs](https://wilkiedevs.com) · Creator of [Lookitry](https://lookitry.com)
