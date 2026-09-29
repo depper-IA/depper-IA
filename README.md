@@ -32,6 +32,16 @@ I specialize in turning complex problems into scalable products — from AI-powe
 | [**Rendertry**](https://github.com/depper-IA/Rendertry) | AI automotive customization visualizer: upload a photo, pick rims, paint or wraps, get the render in seconds. | Next.js · TypeScript · React · GSAP |
 | [**Sammy**](https://github.com/depper-IA/sammy) | Personal AI assistant via Telegram with streaming, voice transcription & Firebase deploy. | TypeScript · Node.js · Telegram API · SQLite |
 
+### Enterprise & Client Platforms
+
+Private systems I built for companies. Code is confidential; each showcase covers architecture and engineering decisions.
+
+| Project | What it is | Stack |
+|---------|-----------|-------|
+| [**Nexus**](https://github.com/depper-IA/nexus-showcase) | Clinical operations platform & patient portal for OmniStem. Full rewrite from legacy PHP to Azure. | React · Express · Prisma · PostgreSQL · Azure · Claude API |
+| [**Atlas**](https://github.com/depper-IA/atlas-showcase) | Clinical inventory with append-only stock ledger, FEFO, QR withdrawals and Microsoft 365 SSO for OmniStem. | React 19 · Express · Prisma · PostgreSQL · Hexagonal |
+| [**GM Capital**](https://github.com/depper-IA/gmcapital-showcase) | Lead-to-credit platform: conversational AI agent on WhatsApp/Instagram, Kommo CRM sync and credit analysis engine. | React · Express · PostgreSQL · n8n · Claude API |
+
 ### MCP & AI Developer Tooling
 
 | Project | What it is | Stack |
