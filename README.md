@@ -24,12 +24,30 @@ I specialize in turning complex problems into scalable products — from AI-powe
 
 ## Featured Projects
 
+### AI Products & SaaS
+
 | Project | What it is | Stack |
 |---------|-----------|-------|
 | [**Lookitry**](https://github.com/depper-IA/lookitry-showcase) | AI Virtual Try-On SaaS for retail. 500+ brands registered. | Next.js · Node.js · n8n · MinIO · Supabase |
-| [**kommo-mcp**](https://github.com/depper-IA/kommo-mcp) | MCP server connecting AI assistants to Kommo CRM. 26 tools, OAuth flow. | Python · MCP Protocol · OAuth2 |
+| [**Rendertry**](https://github.com/depper-IA/Rendertry) | AI automotive customization visualizer: upload a photo, pick rims, paint or wraps, get the render in seconds. | Next.js · TypeScript · React · GSAP |
 | [**Sammy**](https://github.com/depper-IA/sammy) | Personal AI assistant via Telegram with streaming, voice transcription & Firebase deploy. | TypeScript · Node.js · Telegram API · SQLite |
-| [**Rendertry**](https://github.com/depper-IA/Rendertry) | Immersive automotive customization visualizer. | HTML · Vanilla CSS · JavaScript |
+
+### MCP & AI Developer Tooling
+
+| Project | What it is | Stack |
+|---------|-----------|-------|
+| [**kommo-mcp**](https://github.com/depper-IA/kommo-mcp) | MCP server connecting AI assistants to Kommo CRM. 26 tools, OAuth flow. | Python · MCP Protocol · OAuth2 |
+| [**kommo-kiro-power**](https://github.com/depper-IA/kommo-kiro-power) | Kiro Power + MCP server to manage Kommo leads, pipelines, tasks and custom fields from your AI IDE. | Python · MCP · Kiro |
+| [**Margarita Tank**](https://github.com/depper-IA/margarita-tank) | Desk display for Claude Code on an ESP32-C6: animated pixel crab reacting to agent hooks + live token-usage bars. | C · ESP32-C6 · Python · BLE |
+
+### Emergency Response (Open Source)
+
+Built in response to the emergency in Cali, Colombia.
+
+| Project | What it is | Stack |
+|---------|-----------|-------|
+| [**ESPetral Rescue**](https://github.com/depper-IA/ESPetral-Rescue) | Offline-first search & rescue toolkit: Wi-Fi CSI motion detection, acoustic knock sensing, GPS logging and a real-time command dashboard. | C · ESP-IDF · Node.js · TypeScript · React |
+| [**Grietas Vivas**](https://github.com/depper-IA/grietas-vivas) · [live](https://grietas-vivas.vercel.app) | Post-earthquake structural triage PWA with offline support and damage mapping. | Next.js · Supabase · Leaflet · PWA |
 
 ---
 
@@ -65,6 +83,9 @@ Real projects delivered for real businesses:
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
+![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
+![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white)
 ![WordPress](https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white)
 
 </div>
