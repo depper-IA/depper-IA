@@ -1,0 +1,14 @@
+{
+  "name": "depper-ia-readme-assets",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:assets": "node scripts/build-assets.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.34.5"
+  },
+  "devDependencies": {
+    "marked": "12.0.2"
+  }
+}
