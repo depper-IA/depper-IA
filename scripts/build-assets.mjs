@@ -15,6 +15,54 @@ const RAMP = ' .\'`^",:;Il!i><~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8
 const SHADES = 24
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
+// Locale text. English is the default and produces the original output byte for byte.
+const LOCALES = {
+  en: {
+    suffix: '',
+    role: 'Full-Stack Developer &amp; SaaS Builder',
+    founder: 'Founder of Wilkie Devs · Creator of Lookitry',
+    ariaBanner: 'Sam Wilkie, Full-Stack Developer and SaaS Builder',
+    titleBanner: 'Sam Wilkie - Full-Stack Developer &amp; SaaS Builder',
+    ariaHero: 'Sam Wilkie, Full-Stack Developer and SaaS Builder in Cali, Colombia. Profile shown as a vim profile.yml window next to an ASCII portrait.',
+    yaml: [
+      [0, 'profile', null], [1, 'name', 'Sam Wilkie'], [1, 'role', 'Full-Stack Developer & SaaS Builder'],
+      [1, 'origin', 'Cali, Colombia'], [1, 'company', 'Wilkie Devs (founder)'], [1, 'product', 'Lookitry (creator)'],
+      [1, 'focus', 'AI products · Agentic workflows · MCP tooling'], [1, 'experience', '7+ years in production'],
+      [0, 'stack', null], [1, 'frontend', 'TypeScript · React · Next.js'], [1, 'backend', 'Node.js · Express · Python · PostgreSQL'],
+      [1, 'ai', 'Claude API · MCP · n8n'], [1, 'infra', 'Docker · Azure · Cloudflare'],
+      [0, 'contact', null], [1, 'web', 'sam.wilkiedevs.com'], [1, 'linkedin', '/in/sam-wilkie'], [1, 'github', 'depper-IA'],
+    ],
+    phrases: [
+      'Sam Wilkie \u2014 Full-Stack Developer & SaaS Builder',
+      'Founder of Wilkie Devs \u00b7 Creator of Lookitry',
+      'AI Products \u00b7 Agentic Workflows \u00b7 MCP Tooling',
+      'Building from Cali, Colombia for the world',
+    ],
+  },
+  es: {
+    suffix: '-es',
+    role: 'Desarrollador Full-Stack y Creador de SaaS',
+    founder: 'Fundador de Wilkie Devs · Creador de Lookitry',
+    ariaBanner: 'Sam Wilkie, Desarrollador Full-Stack y Creador de SaaS',
+    titleBanner: 'Sam Wilkie - Desarrollador Full-Stack y Creador de SaaS',
+    ariaHero: 'Sam Wilkie, Desarrollador Full-Stack y Creador de SaaS en Cali, Colombia. Perfil mostrado como una ventana vim profile.yml junto a un retrato ASCII.',
+    yaml: [
+      [0, 'perfil', null], [1, 'nombre', 'Sam Wilkie'], [1, 'rol', 'Desarrollador Full-Stack y Creador de SaaS'],
+      [1, 'origen', 'Cali, Colombia'], [1, 'empresa', 'Wilkie Devs (fundador)'], [1, 'producto', 'Lookitry (creador)'],
+      [1, 'enfoque', 'IA · Flujos agénticos · Herramientas MCP'], [1, 'experiencia', '7+ años en producción'],
+      [0, 'stack', null], [1, 'frontend', 'TypeScript · React · Next.js'], [1, 'backend', 'Node.js · Express · Python · PostgreSQL'],
+      [1, 'ia', 'Claude API · MCP · n8n'], [1, 'infra', 'Docker · Azure · Cloudflare'],
+      [0, 'contacto', null], [1, 'web', 'sam.wilkiedevs.com'], [1, 'linkedin', '/in/sam-wilkie'], [1, 'github', 'depper-IA'],
+    ],
+    phrases: [
+      'Sam Wilkie \u2014 Desarrollador Full-Stack y Creador de SaaS',
+      'Fundador de Wilkie Devs \u00b7 Creador de Lookitry',
+      'Productos de IA \u00b7 Flujos Agénticos \u00b7 Herramientas MCP',
+      'Construyendo desde Cali, Colombia para el mundo',
+    ],
+  },
+}
+
 const THEMES = {
   dark: {
     bg: '#000000', grid: 'rgba(255,0,0,0.10)', text: '#f5f5f5', sub: '#a3a3a3', dim: '#6b6b6b',
@@ -68,13 +116,13 @@ const windowChrome = (c, light, WW, WH, title) => `<filter id="ws" x="-10%" y="-
 <text x="${WW / 2}" y="27" text-anchor="middle" class="b" font-size="13.5" fill="${c.ttl}">${title}</text>`
 
 // ---------------------------------------------------------------- banner
-async function banner(name, t) {
+async function banner(name, t, L) {
   const light = name === 'light'
   const c = winColors(light)
   const WW = 1200, BH = 316, WH = WIN_TB + BH
   const W = WW + WIN_PADX * 2, H = WH + WIN_PADT + WIN_PADB
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Sam Wilkie, Full-Stack Developer and SaaS Builder">
-<title>Sam Wilkie - Full-Stack Developer &amp; SaaS Builder</title>
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${L.ariaBanner}">
+<title>${L.titleBanner}</title>
 <defs><style>${await fontCss()}${sharedCss(t)}</style>${gridPattern(t)}</defs>
 ${windowChrome(c, light, WW, WH, 'sam \u2014 zsh \u2014 120\u00d724')}
 <g clip-path="url(#wc)"><g transform="translate(0 ${WIN_TB})">
@@ -83,15 +131,15 @@ ${windowChrome(c, light, WW, WH, 'sam \u2014 zsh \u2014 120\u00d724')}
 <rect x="60" y="40" width="48" height="4" fill="${t.red}"/>
 <text x="60" y="80" class="m sub" font-size="18">sam@wilkiedevs:~$ whoami</text>
 <text x="56" y="184" class="h" font-size="104">Sam Wilkie</text>
-<text x="60" y="224" class="b fg" font-size="26">Full-Stack Developer &amp; SaaS Builder</text>
-<text x="60" y="254" class="b sub" font-size="18">Founder of Wilkie Devs · Creator of Lookitry</text>
+<text x="60" y="224" class="b fg" font-size="26">${L.role}</text>
+<text x="60" y="254" class="b sub" font-size="18">${L.founder}</text>
 <text x="60" y="282" class="m dim" font-size="15">Cali, Colombia</text>
 <text x="${WW - 60}" y="282" text-anchor="end" class="m dim" font-size="15">~/sam $</text>
 <rect class="cur" x="${WW - 52}" y="268" width="11" height="18" fill="${t.red}"/>
 </g></g>
 </g>
 </svg>`
-  fs.writeFileSync(path.join(assets, `banner-${name}.svg`), svg)
+  fs.writeFileSync(path.join(assets, `banner-${name}${L.suffix}.svg`), svg)
 }
 
 // ---------------------------------------------------------------- portrait
@@ -217,16 +265,8 @@ function sceneCss(scanH) {
 }
 
 // ---------------------------------------------------------------- hero ("vim profile.yml" window)
-const YAML = [
-  [0, 'profile', null], [1, 'name', 'Sam Wilkie'], [1, 'role', 'Full-Stack Developer & SaaS Builder'],
-  [1, 'origin', 'Cali, Colombia'], [1, 'company', 'Wilkie Devs (founder)'], [1, 'product', 'Lookitry (creator)'],
-  [1, 'focus', 'AI products · Agentic workflows · MCP tooling'], [1, 'experience', '7+ years in production'],
-  [0, 'stack', null], [1, 'frontend', 'TypeScript · React · Next.js'], [1, 'backend', 'Node.js · Express · Python · PostgreSQL'],
-  [1, 'ai', 'Claude API · MCP · n8n'], [1, 'infra', 'Docker · Azure · Cloudflare'],
-  [0, 'contact', null], [1, 'web', 'sam.wilkiedevs.com'], [1, 'linkedin', '/in/sam-wilkie'], [1, 'github', 'depper-IA'],
-]
-
-async function hero(name, t, p, logos) {
+async function hero(name, t, p, logos, L) {
+  const YAML = L.yaml
   const light = name === 'light'
   const WW = 1200, WH = 720
   const W = WW + WIN_PADX * 2, H = WH + WIN_PADT + WIN_PADB
@@ -259,7 +299,7 @@ async function hero(name, t, p, logos) {
   const cy = Y0 + (YAML.length - 1) * LH
   const SY = PY + PH - SBH
   const nL = YAML.length
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Sam Wilkie, Full-Stack Developer and SaaS Builder in Cali, Colombia. Profile shown as a vim profile.yml window next to an ASCII portrait.">
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${L.ariaHero}">
 <title>Sam Wilkie - vim profile.yml</title>
 <defs><style>${await fontCss()}${sharedCss(t)}
 .m{font-weight:500}
@@ -321,17 +361,12 @@ ${lines}
 <text x="${RX + RW - PAD}" y="${SY + 23}" text-anchor="end" class="m sub" font-size="12" xml:space="preserve">${nL}L  100%  ${nL}:1</text>
 </g>
 </svg>`
-  fs.writeFileSync(path.join(assets, `hero-${name}.svg`), svg)
+  fs.writeFileSync(path.join(assets, `hero-${name}${L.suffix}.svg`), svg)
 }
 
 // ---------------------------------------------------------------- typing headline
-const PHRASES = [
-  'Sam Wilkie \u2014 Full-Stack Developer & SaaS Builder',
-  'Founder of Wilkie Devs \u00b7 Creator of Lookitry',
-  'AI Products \u00b7 Agentic Workflows \u00b7 MCP Tooling',
-  'Building from Cali, Colombia for the world',
-]
-async function typing(name, t) {
+async function typing(name, t, L) {
+  const PHRASES = L.phrases
   const W = 900, H = 60, FS = 26, CW = FS * 0.6
   const TYPE = 0.065, ERASE = 0.03, HOLD = 1.9, GAP = 0.35
   const dur = PHRASES.map((s) => [...s].length * TYPE + HOLD + [...s].length * ERASE + GAP)
@@ -362,7 +397,7 @@ ${css}
 </style></defs>
 ${body}
 </svg>`
-  fs.writeFileSync(path.join(assets, `typing-${name}.svg`), svg)
+  fs.writeFileSync(path.join(assets, `typing-${name}${L.suffix}.svg`), svg)
 }
 
 // ---------------------------------------------------------------- stack
@@ -447,7 +482,7 @@ ${body}
 
 // ---------------------------------------------------------------- project images
 async function projects() {
-  const names = ['lookitry', 'rendertry', 'nexus', 'atlas', 'gmcapital', 'kommokiropower', 'margaritatank', 'espetralrescue', 'grietasvivas']
+  const names = ['lookitry', 'rendertry', 'nexus', 'atlas', 'gmcapital', 'kommokiropower', 'margaritatank', 'espetralrescue', 'grietasvivas', 'wraithbane']
   for (const n of names) {
     // Local override (assets/src/<name>.webp) wins over the portfolio screenshot
     const local = path.join(assets, 'src', `${n}.webp`)
@@ -463,6 +498,9 @@ async function projects() {
 
 const p = await portraitData()
 const logos = { wilkie: await logoData('wilkie', 120, 120, 58), claude: await logoData('claude', 120, 120, 58) }
-for (const [n, t] of Object.entries(THEMES)) { await banner(n, t); await hero(n, t, p, logos); await typing(n, t); await stack(n, t) }
+for (const [n, t] of Object.entries(THEMES)) {
+  for (const L of Object.values(LOCALES)) { await banner(n, t, L); await hero(n, t, p, logos, L); await typing(n, t, L) }
+  await stack(n, t) // language-neutral
+}
 await projects()
 for (const f of fs.readdirSync(assets)) if (f.endsWith('.svg')) console.log(f, (fs.statSync(path.join(assets, f)).size / 1024).toFixed(0) + 'KB')
