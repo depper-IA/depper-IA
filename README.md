@@ -160,3 +160,7 @@ Offline-first PWA for preliminary crack triage after an earthquake, built for th
 *Building from Cali, Colombia for the world.*
 
 </div>
+
+<div align="center">
+<sub>Code in this repo is licensed under <a href="LICENSE">MIT with attribution</a>: if you use it, credit <a href="https://github.com/depper-IA">depper-IA</a> in your README. Personal content and assets are all rights reserved.</sub>
+</div>
