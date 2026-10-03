@@ -50,22 +50,46 @@ const sharedCss = (t) => `
 
 const gridPattern = (t) => `<pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="${t.grid}" stroke-width="1"/></pattern>`
 
+// ---------------------------------------------------------------- macOS window chrome (shared)
+const WIN_PADX = 40, WIN_PADT = 24, WIN_PADB = 56, WIN_TB = 44
+const winColors = (light) => light
+  ? { win: '#ffffff', edge: '#e5e5e5', panel: '#ffffff', bar: '#f3f3f3', tbar: '#ececec', tedge: '#d0d0d0', wedge: 'rgba(0,0,0,0.22)', ttl: '#6e6e73', shadow: 'rgba(0,0,0,0.30)', key: '#737373', dot: '#d4d4d4', ins: '#262626' }
+  : { win: '#0b0b0c', edge: '#1f1f1f', panel: '#050505', bar: '#0f0f0f', tbar: '#2a2a2c', tedge: '#000000', wedge: 'rgba(255,255,255,0.14)', ttl: '#a1a1a6', shadow: 'rgba(0,0,0,0.85)', key: '#8a8a8a', dot: '#3a3a3a', ins: '#e5e5e5' }
+
+// Shadow filter, clip, window body, title bar, border, traffic lights and title.
+// Opens a <g> translated by the canvas padding; the caller closes it with </g>.
+const windowChrome = (c, light, WW, WH, title) => `<filter id="ws" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="${c.shadow}" flood-opacity="${light ? 0.55 : 1}"/></filter>
+<clipPath id="wc"><rect width="${WW}" height="${WH}" rx="12"/></clipPath>
+<g transform="translate(${WIN_PADX} ${WIN_PADT})">
+<rect width="${WW}" height="${WH}" rx="12" fill="${c.win}" filter="url(#ws)"/>
+<g clip-path="url(#wc)"><rect width="${WW}" height="${WIN_TB}" fill="${c.tbar}"/><path d="M0 ${WIN_TB - 0.5}H${WW}" stroke="${c.tedge}"/></g>
+<rect x="0.5" y="0.5" width="${WW - 1}" height="${WH - 1}" rx="11.5" fill="none" stroke="${c.wedge}"/>
+<circle cx="22" cy="22" r="6" fill="#FF5F57" stroke="#E0443E" stroke-width="0.6"/><circle cx="42" cy="22" r="6" fill="#FEBC2E" stroke="#DEA123" stroke-width="0.6"/><circle cx="62" cy="22" r="6" fill="#28C840" stroke="#1AAB29" stroke-width="0.6"/>
+<text x="${WW / 2}" y="27" text-anchor="middle" class="b" font-size="13.5" fill="${c.ttl}">${title}</text>`
+
 // ---------------------------------------------------------------- banner
 async function banner(name, t) {
-  const W = 1200, H = 300
+  const light = name === 'light'
+  const c = winColors(light)
+  const WW = 1200, BH = 316, WH = WIN_TB + BH
+  const W = WW + WIN_PADX * 2, H = WH + WIN_PADT + WIN_PADB
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Sam Wilkie, Full-Stack Developer and SaaS Builder">
 <title>Sam Wilkie - Full-Stack Developer &amp; SaaS Builder</title>
 <defs><style>${await fontCss()}${sharedCss(t)}</style>${gridPattern(t)}</defs>
-<rect width="${W}" height="${H}" fill="${t.bg}"/>
-<rect width="${W}" height="${H}" fill="url(#g)"/>
+${windowChrome(c, light, WW, WH, 'sam \u2014 zsh \u2014 120\u00d724')}
+<g clip-path="url(#wc)"><g transform="translate(0 ${WIN_TB})">
+<rect width="${WW}" height="${BH}" fill="${t.bg}"/>
+<rect width="${WW}" height="${BH}" fill="url(#g)"/>
 <rect x="60" y="40" width="48" height="4" fill="${t.red}"/>
 <text x="60" y="80" class="m sub" font-size="18">sam@wilkiedevs:~$ whoami</text>
 <text x="56" y="184" class="h" font-size="104">Sam Wilkie</text>
 <text x="60" y="224" class="b fg" font-size="26">Full-Stack Developer &amp; SaaS Builder</text>
 <text x="60" y="254" class="b sub" font-size="18">Founder of Wilkie Devs · Creator of Lookitry</text>
 <text x="60" y="282" class="m dim" font-size="15">Cali, Colombia</text>
-<text x="${W - 60}" y="282" text-anchor="end" class="m dim" font-size="15">~/sam $</text>
-<rect class="cur" x="${W - 52}" y="268" width="11" height="18" fill="${t.red}"/>
+<text x="${WW - 60}" y="282" text-anchor="end" class="m dim" font-size="15">~/sam $</text>
+<rect class="cur" x="${WW - 52}" y="268" width="11" height="18" fill="${t.red}"/>
+</g></g>
+</g>
 </svg>`
   fs.writeFileSync(path.join(assets, `banner-${name}.svg`), svg)
 }
@@ -204,12 +228,10 @@ const YAML = [
 
 async function hero(name, t, p, logos) {
   const light = name === 'light'
-  const WW = 1200, WH = 720, PADX = 40, PADT = 24, PADB = 56
-  const W = WW + PADX * 2, H = WH + PADT + PADB
-  const c = light
-    ? { win: '#ffffff', edge: '#e5e5e5', panel: '#ffffff', bar: '#f3f3f3', tbar: '#ececec', tedge: '#d0d0d0', wedge: 'rgba(0,0,0,0.22)', ttl: '#6e6e73', shadow: 'rgba(0,0,0,0.30)', key: '#737373', dot: '#d4d4d4', ins: '#262626' }
-    : { win: '#0b0b0c', edge: '#1f1f1f', panel: '#050505', bar: '#0f0f0f', tbar: '#2a2a2c', tedge: '#000000', wedge: 'rgba(255,255,255,0.14)', ttl: '#a1a1a6', shadow: 'rgba(0,0,0,0.85)', key: '#8a8a8a', dot: '#3a3a3a', ins: '#e5e5e5' }
-  const TB = 44, HH = 52, FH = 44, SBH = 36, PAD = 24
+  const WW = 1200, WH = 720
+  const W = WW + WIN_PADX * 2, H = WH + WIN_PADT + WIN_PADB
+  const c = winColors(light)
+  const TB = WIN_TB, HH = 52, FH = 44, SBH = 36, PAD = 24
   const PY = TB + 28, PH = WH - PY - 28
   const LX = 28, LW = 480, RX = LX + LW + 24, RW = WW - 28 - RX
   const { out, css } = portraitChars(p, light)
@@ -264,14 +286,7 @@ ${sceneCss(scanH)}
 <clipPath id="lp"><rect x="${LX}" y="${PY}" width="${LW}" height="${PH}" rx="8"/></clipPath>
 <clipPath id="rp"><rect x="${RX}" y="${PY}" width="${RW}" height="${PH}" rx="8"/></clipPath>
 </defs>
-<filter id="ws" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="${c.shadow}" flood-opacity="${light ? 0.55 : 1}"/></filter>
-<clipPath id="wc"><rect width="${WW}" height="${WH}" rx="12"/></clipPath>
-<g transform="translate(${PADX} ${PADT})">
-<rect width="${WW}" height="${WH}" rx="12" fill="${c.win}" filter="url(#ws)"/>
-<g clip-path="url(#wc)"><rect width="${WW}" height="${TB}" fill="${c.tbar}"/><path d="M0 ${TB - 0.5}H${WW}" stroke="${c.tedge}"/></g>
-<rect x="0.5" y="0.5" width="${WW - 1}" height="${WH - 1}" rx="11.5" fill="none" stroke="${c.wedge}"/>
-<circle cx="22" cy="22" r="6" fill="#FF5F57" stroke="#E0443E" stroke-width="0.6"/><circle cx="42" cy="22" r="6" fill="#FEBC2E" stroke="#DEA123" stroke-width="0.6"/><circle cx="62" cy="22" r="6" fill="#28C840" stroke="#1AAB29" stroke-width="0.6"/>
-<text x="${WW / 2}" y="27" text-anchor="middle" class="b" font-size="13.5" fill="${c.ttl}">sam \u2014 vim profile.yml \u2014 120\u00d734</text>
+${windowChrome(c, light, WW, WH, 'sam \u2014 vim profile.yml \u2014 120\u00d734')}
 
 <rect x="${LX + 0.5}" y="${PY + 0.5}" width="${LW - 1}" height="${PH - 1}" rx="8" fill="${c.panel}" stroke="${c.edge}"/>
 <text x="${LX + PAD}" y="${PY + 32}" class="m fg" font-size="13" font-weight="500" letter-spacing="1.5">VISUAL.MAP</text>
@@ -438,7 +453,11 @@ async function projects() {
     const local = path.join(assets, 'src', `${n}.webp`)
     const f = fs.existsSync(local) ? local : `${SITE}/projects/${n}.webp`
     if (!fs.existsSync(f)) { console.log('missing source image:', n); continue }
-    await sharp(f).resize({ width: 800, height: 500, fit: "cover", position: f === local ? "centre" : "top" }).webp({ quality: 80 }).toFile(path.join(assets, 'projects', `${n}.webp`))
+    // Corners are baked into the image (transparent) because GitHub strips CSS border-radius
+    const mask = Buffer.from('<svg width="800" height="500"><rect width="800" height="500" rx="24" ry="24"/></svg>')
+    await sharp(f).resize({ width: 800, height: 500, fit: "cover", position: f === local ? "centre" : "top" })
+      .composite([{ input: mask, blend: 'dest-in' }])
+      .webp({ quality: 80, alphaQuality: 100 }).toFile(path.join(assets, 'projects', `${n}.webp`))
   }
 }
 
