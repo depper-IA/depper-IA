@@ -30,7 +30,7 @@ const LOCALES = {
       [1, 'focus', 'AI products · Agentic workflows · MCP tooling'], [1, 'experience', '7+ years in production'],
       [0, 'stack', null], [1, 'frontend', 'TypeScript · React · Next.js'], [1, 'backend', 'Node.js · Express · Python · PostgreSQL'],
       [1, 'ai', 'Claude API · MCP · n8n'], [1, 'infra', 'Docker · Azure · Cloudflare'],
-      [0, 'contact', null], [1, 'web', 'sam.wilkiedevs.com'], [1, 'linkedin', '/in/sam-wilkie'], [1, 'github', 'depper-IA'],
+      [0, 'contact', null], [1, 'web', 'sam.wilkiedevs.com'], [1, 'linkedin', '/in/sam-wilkie'], [1, 'github', 'sam-wilkie'],
     ],
     phrases: [
       'Sam Wilkie \u2014 Full-Stack Developer & SaaS Builder',
@@ -52,7 +52,7 @@ const LOCALES = {
       [1, 'enfoque', 'IA · Flujos agénticos · Herramientas MCP'], [1, 'experiencia', '7+ años en producción'],
       [0, 'stack', null], [1, 'frontend', 'TypeScript · React · Next.js'], [1, 'backend', 'Node.js · Express · Python · PostgreSQL'],
       [1, 'ia', 'Claude API · MCP · n8n'], [1, 'infra', 'Docker · Azure · Cloudflare'],
-      [0, 'contacto', null], [1, 'web', 'sam.wilkiedevs.com'], [1, 'linkedin', '/in/sam-wilkie'], [1, 'github', 'depper-IA'],
+      [0, 'contacto', null], [1, 'web', 'sam.wilkiedevs.com'], [1, 'linkedin', '/in/sam-wilkie'], [1, 'github', 'sam-wilkie'],
     ],
     phrases: [
       'Sam Wilkie \u2014 Desarrollador Full-Stack y Creador de SaaS',
@@ -346,7 +346,7 @@ ${labels.map((l, i) => `<g class="f${i}"><text x="${LX + PAD}" y="${PY + PH - 17
 <text x="${RX + PAD}" y="${PY + 32}" class="m fg" font-size="14" font-weight="500">profile.yml</text>
 <text x="${RX + PAD + 11 * 8.4 + 10}" y="${PY + 32}" class="m dim" font-size="11" letter-spacing="1">[YAML]</text>
 <rect x="${RX + RW - PAD - 108}" y="${PY + 15}" width="108" height="22" rx="11" fill="none" stroke="${t.red}" stroke-opacity="0.8"/>
-<text x="${RX + RW - PAD - 54}" y="${PY + 30}" text-anchor="middle" class="m red" font-size="12">@depper-IA</text>
+<text x="${RX + RW - PAD - 54}" y="${PY + 30}" text-anchor="middle" class="m red" font-size="12">@sam-wilkie</text>
 <path d="M${RX + 1} ${PY + HH}H${RX + RW - 1}" stroke="${c.edge}"/>
 ${lines}
 <g class="cw"><rect class="cur" x="${cx.toFixed(1)}" y="${(cy - 13).toFixed(1)}" width="${CW.toFixed(1)}" height="18" fill="${t.red}"/></g>

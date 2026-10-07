@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-<a href="https://hits.sh/github.com/depper-IA/"><img src="https://hits.sh/github.com/depper-IA.svg?style=flat-square&color=ff0000&label=visitas+al+perfil" alt="visitas al perfil"></a>
+<a href="https://hits.sh/github.com/sam-wilkie/"><img src="https://hits.sh/github.com/sam-wilkie.svg?style=flat-square&color=ff0000&label=visitas+al+perfil" alt="visitas al perfil"></a>
 </p>
 
 ## `$ whoami`
@@ -60,19 +60,19 @@ Sistemas privados construidos para empresas. El código es confidencial; cada sh
 <table>
 <tr>
 <td width="33%" valign="top">
-<a href="https://github.com/depper-IA/nexus-showcase"><img src="assets/projects/nexus.webp" alt="Nexus"></a><br>
+<a href="https://github.com/sam-wilkie/nexus-showcase"><img src="assets/projects/nexus.webp" alt="Nexus"></a><br>
 <b>Nexus</b><br>
 Plataforma de operaciones clínicas y portal de pacientes Connect para OmniStem, sobre Microsoft Azure.<br>
 <code>TypeScript · React · Node.js · Azure · PostgreSQL + pgvector</code>
 </td>
 <td width="33%" valign="top">
-<a href="https://github.com/depper-IA/atlas-showcase"><img src="assets/projects/atlas.webp" alt="Atlas"></a><br>
+<a href="https://github.com/sam-wilkie/atlas-showcase"><img src="assets/projects/atlas.webp" alt="Atlas"></a><br>
 <b>Atlas</b><br>
 Plataforma de inventario clínico y trazabilidad de suministros para OmniStem.<br>
 <code>TypeScript · React · Node.js · PostgreSQL (Prisma) · Microsoft 365 SSO</code>
 </td>
 <td width="33%" valign="top">
-<a href="https://github.com/depper-IA/gmcapital-showcase"><img src="assets/projects/gmcapital.webp" alt="GM Capital"></a><br>
+<a href="https://github.com/sam-wilkie/gmcapital-showcase"><img src="assets/projects/gmcapital.webp" alt="GM Capital"></a><br>
 <b>GM Capital</b><br>
 Portal de evaluación de crédito con un agente de IA en WhatsApp integrado al CRM.<br>
 <code>TypeScript · Python (MCP) · Kommo CRM · agente de IA en WhatsApp · n8n</code>
@@ -85,13 +85,13 @@ Portal de evaluación de crédito con un agente de IA en WhatsApp integrado al C
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/depper-IA/kommo-kiro-power"><img src="assets/projects/kommokiropower.webp" alt="kommo-kiro-power"></a><br>
+<a href="https://github.com/sam-wilkie/kommo-kiro-power"><img src="assets/projects/kommokiropower.webp" alt="kommo-kiro-power"></a><br>
 <b>kommo-kiro-power</b><br>
 Kiro Power y servidor MCP para gestionar Kommo CRM desde un IDE con IA. <a href="https://builder.aws.com/content/3FyW2H9qfOkF9J1PwXhtsGflN7z/building-a-kiro-power-for-kommo-crm-from-mcp-server-to-published-power">Lee el artículo en AWS Builder</a>.<br>
 <code>Python · Model Context Protocol · Kiro Power · Kommo CRM</code>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/depper-IA/margarita-tank"><img src="assets/projects/margaritatank.webp" alt="Margarita Tank"></a><br>
+<a href="https://github.com/sam-wilkie/margarita-tank"><img src="assets/projects/margaritatank.webp" alt="Margarita Tank"></a><br>
 <b>Margarita Tank</b><br>
 Pantalla de escritorio para Claude Code sobre un ESP32-C6, con animación y consumo de tokens en vivo. Fork de Clawd Tank.<br>
 <code>C · Python · ESP32-C6 · BLE · LVGL</code>
@@ -106,7 +106,7 @@ Construidos como respuesta a la emergencia en Cali, Colombia.
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/depper-IA/ESPetral-Rescue"><img src="assets/projects/espetralrescue.webp" alt="ESPetral Rescue"></a><br>
+<a href="https://github.com/sam-wilkie/ESPetral-Rescue"><img src="assets/projects/espetralrescue.webp" alt="ESPetral Rescue"></a><br>
 <b>ESPetral Rescue</b><br>
 Herramienta de código abierto para búsqueda y rescate en campo, con detección de movimiento por Wi-Fi CSI.<br>
 <code>C (ESP-IDF) · TypeScript · React · Node.js · Wi-Fi CSI</code>
@@ -127,7 +127,7 @@ Construido junto a mi hijo de 11 años.
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/depper-IA/wraithbane-showcase"><img src="assets/projects/wraithbane.webp" alt="Wraithbane"></a><br>
+<a href="https://github.com/sam-wilkie/wraithbane-showcase"><img src="assets/projects/wraithbane.webp" alt="Wraithbane"></a><br>
 <b>Wraithbane</b><br>
 Un plataformero 2D de fantasía oscura, tipo boss-rush, creado por mi hijo Travis, donde las audiencias de TikTok Live y Kick influyen en la partida en tiempo real. Yo construí el puente con el streaming en vivo, el servidor de acceso con Patreon y telemetría, y el despliegue.<br>
 <code>JavaScript · HTML5 Canvas · Node.js · Socket.IO · Supabase · Docker</code>
@@ -179,5 +179,5 @@ Un plataformero 2D de fantasía oscura, tipo boss-rush, creado por mi hijo Travi
 </div>
 
 <div align="center">
-<sub>El código de este repositorio está bajo licencia <a href="LICENSE">MIT con atribución</a>: si lo usas, da crédito a <a href="https://github.com/depper-IA">depper-IA</a> en tu README. El contenido personal y los recursos gráficos tienen todos los derechos reservados.</sub>
+<sub>El código de este repositorio está bajo licencia <a href="LICENSE">MIT con atribución</a>: si lo usas, da crédito a <a href="https://github.com/sam-wilkie">sam-wilkie</a> en tu README. El contenido personal y los recursos gráficos tienen todos los derechos reservados.</sub>
 </div>

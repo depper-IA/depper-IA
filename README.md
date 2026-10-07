@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-<a href="https://hits.sh/github.com/depper-IA/"><img src="https://hits.sh/github.com/depper-IA.svg?style=flat-square&color=ff0000&label=profile+views" alt="profile views"></a>
+<a href="https://hits.sh/github.com/sam-wilkie/"><img src="https://hits.sh/github.com/sam-wilkie.svg?style=flat-square&color=ff0000&label=profile+views" alt="profile views"></a>
 </p>
 
 ## `$ whoami`
@@ -60,19 +60,19 @@ Private systems built for companies. Code is confidential; each showcase covers 
 <table>
 <tr>
 <td width="33%" valign="top">
-<a href="https://github.com/depper-IA/nexus-showcase"><img src="assets/projects/nexus.webp" alt="Nexus"></a><br>
+<a href="https://github.com/sam-wilkie/nexus-showcase"><img src="assets/projects/nexus.webp" alt="Nexus"></a><br>
 <b>Nexus</b><br>
 Clinical operations platform and Connect patient portal for OmniStem, on Microsoft Azure.<br>
 <code>TypeScript · React · Node.js · Azure · PostgreSQL + pgvector</code>
 </td>
 <td width="33%" valign="top">
-<a href="https://github.com/depper-IA/atlas-showcase"><img src="assets/projects/atlas.webp" alt="Atlas"></a><br>
+<a href="https://github.com/sam-wilkie/atlas-showcase"><img src="assets/projects/atlas.webp" alt="Atlas"></a><br>
 <b>Atlas</b><br>
 Clinical inventory and supply traceability platform for OmniStem.<br>
 <code>TypeScript · React · Node.js · PostgreSQL (Prisma) · Microsoft 365 SSO</code>
 </td>
 <td width="33%" valign="top">
-<a href="https://github.com/depper-IA/gmcapital-showcase"><img src="assets/projects/gmcapital.webp" alt="GM Capital"></a><br>
+<a href="https://github.com/sam-wilkie/gmcapital-showcase"><img src="assets/projects/gmcapital.webp" alt="GM Capital"></a><br>
 <b>GM Capital</b><br>
 Credit evaluation portal with a WhatsApp AI agent integrated into the CRM.<br>
 <code>TypeScript · Python (MCP) · Kommo CRM · WhatsApp AI agent · n8n</code>
@@ -85,13 +85,13 @@ Credit evaluation portal with a WhatsApp AI agent integrated into the CRM.<br>
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/depper-IA/kommo-kiro-power"><img src="assets/projects/kommokiropower.webp" alt="kommo-kiro-power"></a><br>
+<a href="https://github.com/sam-wilkie/kommo-kiro-power"><img src="assets/projects/kommokiropower.webp" alt="kommo-kiro-power"></a><br>
 <b>kommo-kiro-power</b><br>
 Kiro Power and MCP server to manage Kommo CRM from an AI IDE. <a href="https://builder.aws.com/content/3FyW2H9qfOkF9J1PwXhtsGflN7z/building-a-kiro-power-for-kommo-crm-from-mcp-server-to-published-power">Read the article on AWS Builder</a>.<br>
 <code>Python · Model Context Protocol · Kiro Power · Kommo CRM</code>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/depper-IA/margarita-tank"><img src="assets/projects/margaritatank.webp" alt="Margarita Tank"></a><br>
+<a href="https://github.com/sam-wilkie/margarita-tank"><img src="assets/projects/margaritatank.webp" alt="Margarita Tank"></a><br>
 <b>Margarita Tank</b><br>
 Desktop display for Claude Code on an ESP32-C6 with animation and live token usage. Fork of Clawd Tank.<br>
 <code>C · Python · ESP32-C6 · BLE · LVGL</code>
@@ -106,7 +106,7 @@ Built in response to the emergency in Cali, Colombia.
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/depper-IA/ESPetral-Rescue"><img src="assets/projects/espetralrescue.webp" alt="ESPetral Rescue"></a><br>
+<a href="https://github.com/sam-wilkie/ESPetral-Rescue"><img src="assets/projects/espetralrescue.webp" alt="ESPetral Rescue"></a><br>
 <b>ESPetral Rescue</b><br>
 Open-source field search-and-rescue tool with Wi-Fi CSI motion detection.<br>
 <code>C (ESP-IDF) · TypeScript · React · Node.js · Wi-Fi CSI</code>
@@ -127,7 +127,7 @@ Built together with my 11-year-old son.
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/depper-IA/wraithbane-showcase"><img src="assets/projects/wraithbane.webp" alt="Wraithbane"></a><br>
+<a href="https://github.com/sam-wilkie/wraithbane-showcase"><img src="assets/projects/wraithbane.webp" alt="Wraithbane"></a><br>
 <b>Wraithbane</b><br>
 A dark-fantasy 2D boss-rush platformer created by my son Travis, where TikTok Live and Kick audiences affect the match in real time. I built the live-stream bridge, the Patreon-gated access and telemetry server, and the deployment.<br>
 <code>JavaScript · HTML5 Canvas · Node.js · Socket.IO · Supabase · Docker</code>
@@ -179,5 +179,5 @@ A dark-fantasy 2D boss-rush platformer created by my son Travis, where TikTok Li
 </div>
 
 <div align="center">
-<sub>Code in this repo is licensed under <a href="LICENSE">MIT with attribution</a>: if you use it, credit <a href="https://github.com/depper-IA">depper-IA</a> in your README. Personal content and assets are all rights reserved.</sub>
+<sub>Code in this repo is licensed under <a href="LICENSE">MIT with attribution</a>: if you use it, credit <a href="https://github.com/sam-wilkie">sam-wilkie</a> in your README. Personal content and assets are all rights reserved.</sub>
 </div>
